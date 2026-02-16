@@ -1,0 +1,40 @@
+# --- Core LaTeX Auxiliary Files ---
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# --- Bibliography (BibTeX/Biber) ---
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# --- Indices & Lists ---
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.glo
+*.gls
+*.ist
+
+# --- Specialized Packages ---
+*.nav          # Beamer (slides)
+*.snm          # Beamer (slides)
+*.vrb          # Beamer (slides)
+*.table        # Gnuplot
+*.gnuplot      # Gnuplot
+*.ent          # Endnotes
+*.pyg          # Minted (code highlighting)
+
+# --- Editor/OS Specific ---
+.DS_Store      # macOS
+Thumbs.db      # Windows
+.vscode/       # VS Code settings
+.idea/         # IntelliJ/PyCharm
+*.swp          # Vim
