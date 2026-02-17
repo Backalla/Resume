@@ -1,9 +1,5 @@
 \documentclass[a4,10pt]{article}
 
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  STARTING HERE, DO NOT TOUCH ANYTHING 
-%%%%%%% --------------------------------------------------------------------------------------
-
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
@@ -21,48 +17,20 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage{anyfontsize}
 
-%%%% Set Margins
 \usepackage[margin=0.75cm, top=0.75cm]{geometry}
 
-% %%%% Set Fonts
-% \setmainfont[
-% BoldFont=SourceSansPro-Semibold.otf, %SourceSansPro-Bold.otf
-% ItalicFont=SourceSansPro-RegularIt.otf
-% ]{SourceSansPro-Regular.otf}
-% \setsansfont{SourceSansPro-Semibold.otf}
-
-%%%% Set Page
 \pagestyle{fancy}
 \fancyhf{} 
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-%%%% Set URL Style
 \urlstyle{same}
 
-%%%% Set Indentation
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-%%%% Set Secondary Color
-\definecolor{UI_blue}{RGB}{52, 91, 99}
+\definecolor{UI_blue}{RGB}{35, 74, 82}
 
 %%%% Define New Commands
 \usepackage[style=nature, maxbibnames=3]{biblatex}
-\addbibresource{Publications.bib}
-
-%%%% Bold Name in Publications
-\renewcommand*{\mkbibnamegiven}[1]{%
-\ifitemannotation{highlight}
-{\textbf{#1}}
-{#1}}
-
-\renewcommand*{\mkbibnamefamily}[1]{%
-\ifitemannotation{highlight}
-{\textbf{#1}}
-{#1}}
 
 %%%% Set Sections formatting
 \titleformat{\section}{
@@ -73,10 +41,7 @@
 \newcommand{\subtext}[1]{
 #1\par\vspace{-0.2cm}}
 
-% \newcommand{\subtextit}[1]{\vspace{0.15cm}
-% \textit{ #1 \vspace{-0.2cm}} }
 
-%%%% Set Item Spacing
 \setlist[itemize]{align=parleft,left=0pt..1em}
 
 %%%% New Itemize "Zitemize" Formatting - tighter spacing than itemize
@@ -95,55 +60,28 @@
 
 \begin{document}
 
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  HEADER
-%%%%%%% --------------------------------------------------------------------------------------
+
 \begin{center}
-    \begin{minipage}[b]{0.24\textwidth}
-            \large +91-9833588079 \\
-            \large
-            \href{mailto:tusharvijaypawar@gmail.com}{tusharvijaypawar@gmail.com} 
-    \end{minipage}% 
-    \begin{minipage}[b]{0.5\textwidth}
-            \centering
-            {\Huge Tushar Pawar} \\ %
+    \begin{minipage}[b]{0.65\textwidth}
+            \raggedright
+            {\fontsize{32}{38}\selectfont Tushar Pawar} \\ %
             \vspace{0.1cm}
-            {\color{UI_blue} \Large{Software Engineer, Machine Learning}} \\
-    \end{minipage}% 
-    \begin{minipage}[b]{0.24\textwidth}
-            \flushright \large  %Willing to Relocate
-            {\href{https://www.linkedin.com/in/backalla/}{linkedin.com/in/backalla/} } \\
-            \href{https://github.com/backalla}{github.com/backalla}
-    \end{minipage}   
-    
-\vspace{-0.15cm} 
+            {\color{UI_blue} \Large{Senior Software Engineer, Machine Learning}} \\
+    \end{minipage}%
+    \begin{minipage}[b]{0.35\textwidth}
+            \flushright \large
+            +91-9833588079 \\
+            \href{mailto:tusharvijaypawar@gmail.com}{tusharvijaypawar@gmail.com} \\
+            {\href{https://www.linkedin.com/in/backalla/}{linkedin.com/in/backalla} }
+    \end{minipage}
+
+\vspace{-0.15cm}
 % {\color{UI_blue} \hrulefill}
 \end{center}
-% \vspace{-0.25cm}
 
 
-% \hskills{Impact:} First engineer at Infilect Technologies, scaled to 20M valuation and 12 million images processed per month.  %% This can be customized, but I feel this impact statement makes people want to read more.
-% \vspace{-0.3cm}
-
-
-
-
-
-
-
-
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  WORK EXPERIENCE
-%%%%%%% --------------------------------------------------------------------------------------
 \section{Experience}
 
-%%% ----- Best way to write items (Credit - ResumePuppy.com)
-        % \item Developed AngularJS microservice to automate parsing of ~300 emails/day for efficient service request categorization using Linux MBox & Perl scripts; reduced manual re-allocation by 87%.
-        % \item Led the development, build and bring-up execution of Lyft’s first functional AV platform from start to finish; established fleet-grade product reliability over 5 months.
-        % \item Enhanced user experience by fine-tuning stored procedures & SQL queries for efficient data -retrieval from ~4M records accessed by 5000+ users worldwide.
-        % \item Built a custom menu single handedly using HTML5, CSS3, XML and JSP and improved the performance of existing application by tuning the PL/SQL scripts by 20\% and reduced on-migration time.
-
-%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
 \subsection*{Senior Software Engineer - \normalsize\normalfont Google \textbf{[India]} \hfill Oct 2023 --- Present} 
     \begin{zitemize}
         \item Building a spam protection system on RCS messaging for detecting potential spammer registrations impacting 1B+ users of RCS on Android and iOS. Built a model retraining and evaluation pipeline to process 50M messaging events per day.
@@ -152,14 +90,12 @@
         
     \end{zitemize}
 
-%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
 \subsection*{Machine Learning Engineer - \normalsize\normalfont Booking.com \textbf{[Amsterdam - Netherlands]} \hfill April 2022 --- Sept 2023} 
     \begin{zitemize}
         \item Led the integration and deployment of \textbf{Tensorflow Serving} and \textbf{NVIDIA Triton} as inference backends in ML Platform for large scale ML serving. Handled peak load of \textbf{170 Billion} requests per day with \textbf{p99.9 latency of 50ms}.
         \item Collaborated with cross-functional teams to develop internal tools to migrate ML serving deployments from on-prem infra to AWS.
     \end{zitemize}
 
-%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
 \subsection*{Head of AI-Cloud Engineering - \normalsize\normalfont Infilect Technologies \textbf{[Bangalore - India]} \hfill June 2020 --- March 2022} 
     \begin{zitemize}
         \item End to end ownership of entire ML model deployment pipeline. Scaled ML pipelines containing detection, segmentation and classification blocks to handle peak load of \textasciitilde60k images per hour. 
@@ -168,18 +104,14 @@
         \item Managed project priorities, deadlines, stakeholder alignment, and deliverables to ensure successful completion of high impact projects.
     \end{zitemize}
 
-%%%%%%% ----------------------------------- Role 4 ----------------------------------- %%%%%%%
 \subsection*{Machine Learning Engineer - \normalsize\normalfont Infilect Technologies \textbf{[Bangalore - India]} \hfill Sept 2018 --- June 2020} 
     \begin{zitemize}
         \item Designed a custom debug interface built in \textbf{React} and \textbf{Django} backend which helped ML team to easily visualize model outputs, discover edge samples, fine-tune post-processing logic.
         \item Trained object detectors, classifiers and segmentation models on internal training frameworks built using \textbf{PyTorch} and \textbf{Tensorflow}.
         \item Created image search system to find samples for classification data from huge untagged corpus of 55M images. Used  \textbf{Elasticsearch} to store embeddings and KNN plugin to query for embedding matches. 
-        % \item Built a \textbf{React} based frontend for the image search tool for human taggers to upload query image, visualise paginated, ranked results and select relevant matches to be tagged.
-        % \item Built an augmentation library on top of {\href{https://github.com/aleju/imgaug}{imgaug}} library to apply repeatable augmentations on image (classification, detection and segmentation) datasets.
     \end{zitemize}
 
 
-%%%%%%% ----------------------------------- Role 5 ----------------------------------- %%%%%%%
 \subsection*{Research Engineer - \normalsize\normalfont Praemineo Technologies \textbf{[Bangalore - India]} \hfill June 2017 --- Aug 2018} 
     \begin{zitemize}
         \item Built a Multilingual OCR system to extract text from a document with \textbf{\textasciitilde96\% accuracy} using a 
@@ -188,26 +120,15 @@
     \end{zitemize}
 
 \vspace{-0.1cm}
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  ACADEMIC PROJECTS
-%%%%%%% --------------------------------------------------------------------------------------
-\section{Projects} %% (Or "Research", select as appropriate)
 
-%%% ----- Best way to write items (Credit - FAANGPath.com)
-        % \item Achieved X\% growth for XYZ using A, B, and C skills.
-        % \item Led XYZ which led to X\% of improvement in ABC
-        % \item Developed XYZ that did A, B, and C using X, Y, and Z. 
-
-%%%%%%% ----------------------------------- Role 1 ----------------------------------- %%%%%%%
-% \subsection*{CLI tool for model management, {\normalsize\normalfont ML Platform Team, Booking.com \hfill Oct 2022 --- Dec 2022}} 
+\section{Projects} 
 \subsection*{CLI tool for model management, {\normalsize\normalfont ML Platform Team, Booking.com }} 
     \begin{zitemize}
         \item Led the development of a CLI tool written in \textbf{Scala} to manage deployed ML models.  
         \item Users can directly interact with their models without configuring client tools and making API calls.
     \end{zitemize}
 
-%%%%%%% ----------------------------------- Role 1 ----------------------------------- %%%%%%%
-% \subsection*{Model Training Framework, {\normalsize\normalfont ML Team, Infilect \hfill Jan 2019 --- April 2019}}
+
 \subsection*{Model Training Framework, {\normalsize\normalfont ML Team, Infilect}}
     \begin{zitemize}
         \item Built internal framework to train object detector based on \textbf{SSD} and \textbf{retinanet} architectures. 
@@ -216,8 +137,7 @@
     \end{zitemize}
 
 
-%%%%%%% ----------------------------------- Role 2 ----------------------------------- %%%%%%%
-% \subsection*{AI Controller, {\normalsize\normalfont MLOps Team, Infilect \hfill Nov 2020 --- Jan 2021}}
+
 \subsection*{AI Controller, {\normalsize\normalfont MLOps Team, Infilect }}
     \begin{zitemize}
         \item Built an internal framework for automated deployment system for all ML models on a distributed cluster of GPU nodes. Integrated \textbf{Prometheus} for centralized monitoring of all (\textasciitilde600) models deployed across \textasciitilde120 GPU nodes. Visualized using \textbf{Grafana} dashboard.
@@ -225,8 +145,7 @@
     \end{zitemize}
 
 
-%%%%%%% ----------------------------------- Role 3 ----------------------------------- %%%%%%%
-% \subsection*{AI Assisted data tagging, {\normalsize\normalfont ML Team, Infilect \hfill Mar 2021 --- July 2021}}
+
 \subsection*{AI Assisted data tagging, {\normalsize\normalfont ML Team, Infilect }}
     \begin{zitemize}
         \item Built AI assisted tool to improve data tagging speed and quality for detection and classification tasks. Self supervised data tagging using \textbf{BYOL} and \textbf{SimCLRv2} gave \textasciitilde60\% accuracy on unseen and untagged data. 
@@ -235,8 +154,6 @@
     \end{zitemize}
 
 
-%%%%%%% ----------------------------------- Role 3 ----------------------------------- %%%%%%%
-% \subsection*{Synthetic image data generator using Blender, {\normalsize\normalfont ML Team, Infilect \hfill June 2021 --- Sept 2021}} 
 \subsection*{Synthetic image data generator using Blender, {\normalsize\normalfont ML Team, Infilect }} 
     \begin{zitemize}
         \item Led the development of automated synthetic image data generation tool for detection and classification tasks using \textbf{Blender}. 
@@ -244,10 +161,6 @@
         \item Reduced the dependency on tagged data and gave \textbf{\textasciitilde15\% accuracy improvement} over model trained only on natural tagged data.
     \end{zitemize}
 
-
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  SKILLS
-%%%%%%% --------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabular}{p{12em} p{48em}}
 \hskills{Programming Languages} &  Scala, Java, C, C++, Python, JavaScript, Shell  \\
@@ -259,46 +172,6 @@
 \vspace{-0.2cm}
 
 
-
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  VOLUNTEER EXPERIENCE
-%%%%%%% --------------------------------------------------------------------------------------
-% \section{Volunteer (or LEADERSHIP) Experience}
-
-%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
-% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
-%     \begin{zitemize}
-            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
-%     \end{zitemize}
-
-
-%%%%%%% ----------------------------------- Role 6 ----------------------------------- %%%%%%%
-% \subsection*{Position, Org \hfill Mon yyyy --- Mon yyyy} 
-%     \begin{zitemize}
-            % \item \textbf{Short Project Title.} {Build a project that does something and had quantified success using A, B, and C.}
-%     \end{zitemize}
-
-
-
-
 \vspace{-0.2cm}
 
-%%%%%%% --------------------------------------------------------------------------------------
-%%%%%%%  AWARDS & HONORS
-%%%%%%% --------------------------------------------------------------------------------------
-% \section{Achievements}
-% \begin{tabular}[t]{ p{4em} p{50em}}
-% \hskills{2017} & Qualified for and competed in ACM International Collegiate Programming Contest Amritapuri Regionals. \\ % 
-% \hskills{2016} & Ranked 276 in Morgan Stanley Codeathon 2016 out of 4000
-% participants. \\
-% \end{tabular} 
-
-% \section{Education}
-
-% \subsection*{Bachelor of Engineering, CS, {\normalsize \normalfont Rizvi College of Engineering, Mumbai} \hfill June 2013 --- May 2017} 
-% \vspace{0.1cm}
-% \subsection*{HSC, {\normalsize \normalfont Kendriya Vidyalaya ONGC Panvel} \hfill April 2011 --- March 2013} 
-
-
-%%%%%%% ---------------------------- END DOC HERE ---------------------------- %%%%%%% 
 \end{document}
