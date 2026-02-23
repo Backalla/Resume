@@ -19,9 +19,9 @@
 
 \usepackage[margin=0.75cm, top=0.75cm]{geometry}
 
-\pagestyle{fancy}
-\fancyhf{} 
-\fancyfoot{}
+% \pagestyle{fancy}
+% \fancyhf{} 
+% \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -29,17 +29,12 @@
 
 \definecolor{UI_blue}{RGB}{35, 74, 82}
 
-%%%% Define New Commands
-\usepackage[style=nature, maxbibnames=3]{biblatex}
 
-%%%% Set Sections formatting
 \titleformat{\section}{
 \color{UI_blue} \scshape \raggedright \large 
 }{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
 
-%%%% Set Subtext Formatting
-\newcommand{\subtext}[1]{
-#1\par\vspace{-0.2cm}}
+
 
 
 \setlist[itemize]{align=parleft,left=0pt..1em}
@@ -54,8 +49,13 @@
 \newcommand{\hskills}[1]{
 \textbf{\bfseries #1} }
 
+\newcommand{\hrole}[2]{{\fontsize{11}{12}\selectfont \textbf{\underline{#1}}  \hfill{#2}}}
+
+\newcommand{\hprojectname}[1]{\vspace{0.4cm}\noindent\textbf{#1}\vspace{-0.1cm}}
+
+
 %%%% Set Subsection formatting
-\titleformat{\subsection}{\vspace{-0.1cm} 
+\titleformat{\subsection}{\vspace{0.1cm} 
 \bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
 
 \begin{document}
@@ -65,7 +65,7 @@
     \begin{minipage}[b]{0.65\textwidth}
             \raggedright
             {\fontsize{32}{38}\selectfont Tushar Pawar} \\ %
-            \vspace{0.1cm}
+            \vspace{0.2cm}
             {\color{UI_blue} \Large{Senior Software Engineer, Machine Learning}} \\
     \end{minipage}%
     \begin{minipage}[b]{0.35\textwidth}
@@ -81,60 +81,84 @@
 
 \noindent\textit{\textbf{Summary}}: Summary
 \section{Experience}
+\subsection{\hrole{Senior Software Engineer - Google - AI Research Accelerator Team}{Oct 2023 --- Present}}
 
-\subsection*{\underline{Senior Software Engineer} - \normalsize\normalfont\underline{Google - AI Research Accelerator Team} - [Bengaluru - India] \hfill Oct 2023 --- Present} 
-
-    \vspace{0.3cm}
-    \noindent\textit{\textbf{RCS Spam Protection}}
-    \vspace{-0.2cm}
+    \hprojectname{RCS Spam Protection}
     \begin{zitemize}
         \item Building a spam protection system on RCS messaging for detecting potential spammer registrations impacting 1B+ users of RCS on Android and iOS. Built a model retraining and evaluation pipeline to process 50M messaging events per day.
     \end{zitemize}
     
-    \vspace{0.4cm}
-    \noindent\textit{\textbf{DMA Compliance --- Technical Asset Recommendation}}
-    \vspace{-0.2cm}
+    \hprojectname{DMA Compliance --- Technical Asset Recommendation}
     \begin{zitemize}
         \item ML lead for recommending Google wide (\textasciitilde800M) technical assets to (\textasciitilde6k) product owners for DMA compliance.
         \item Built end-to-end model training \& evaluation framework for experimenting with two-tower model architectures and testing hypotheses.
     \end{zitemize}
     
-    \vspace{0.4cm}
-    \noindent\textit{\textbf{Gemini Nano v4 Multilingual Evaluation}}
-    \vspace{-0.2cm}
+    \hprojectname{Gemini Nano v4 Multilingual Evaluation}
     \begin{zitemize}
         \item Built a synthetic data generation pipeline using \textbf{Gemini 2.5 Pro} to produce human-reviewed post-training datasets across 7 languages for \textbf{Gemini Nano v4}, covering translation, summarization, chat, and proofreading capabilities.
         \item Developed LLM-as-judge autoraters evaluating model outputs on naturalness, verbosity, and language adherence, surfacing critical capability gaps in non-English languages.
         \item Created an end-to-end eval automation platform enabling DeepMind engineers to benchmark Nano v4 checkpoints against golden datasets with a leaderboard for tracking progress, significantly reducing model rollout effort.
     \end{zitemize}
 
-\subsection*{\underline{Machine Learning Engineer} - \normalsize\normalfont\underline{Booking.com} \textbf{[Amsterdam - Netherlands]} \hfill April 2022 --- Sept 2023} 
+\subsection{\hrole{Machine Learning Engineer - Booking.com - ML Platform Team}{April 2022 --- Sept 2023}}
+
+    \hprojectname{ML Inference Platform}
     \begin{zitemize}
         \item Led the integration and deployment of \textbf{Tensorflow Serving} and \textbf{NVIDIA Triton} as inference backends in ML Platform for large scale ML serving. Handled peak load of \textbf{170 Billion} requests per day with \textbf{p99.9 latency of 50ms}.
+    \end{zitemize}
+
+    \hprojectname{Cloud Migration Tooling}
+    \begin{zitemize}
         \item Collaborated with cross-functional teams to develop internal tools to migrate ML serving deployments from on-prem infra to AWS.
     \end{zitemize}
 
-\subsection*{\underline{Head of AI-Cloud Engineering} - \normalsize\normalfont\underline{Infilect Technologies} \textbf{[Bangalore - India]} \hfill June 2020 --- March 2022} 
+\subsection{\hrole{Head of AI-Cloud Engineering - Infilect Technologies} {June 2020 --- March 2022}}
+
+    \hprojectname{ML Deployment Pipeline}
     \begin{zitemize}
-        \item End to end ownership of entire ML model deployment pipeline. Scaled ML pipelines containing detection, segmentation and classification blocks to handle peak load of \textasciitilde60k images per hour. 
+        \item End to end ownership of entire ML model deployment pipeline. Scaled ML pipelines containing detection, segmentation and classification blocks to handle peak load of \textasciitilde60k images per hour.
+    \end{zitemize}
+
+    \hprojectname{ML Development Platform}
+    \begin{zitemize}
+        \item Led the development of internal tools for designing, developing, testing and deploying ML models. Similar to \textbf{Tensorboard}.
+    \end{zitemize}
+
+    \hprojectname{Team \& Project Leadership}
+    \begin{zitemize}
         \item Mentored junior team members and provided technical leadership in ML system design.
-        \item Led the development of internal tools for designing, developing, testing and deploying ML models. Similar to \textbf{Tensorboard}. 
         \item Managed project priorities, deadlines, stakeholder alignment, and deliverables to ensure successful completion of high impact projects.
     \end{zitemize}
 
-\subsection*{\underline{Machine Learning Engineer} - \normalsize\normalfont\underline{Infilect Technologies} \textbf{[Bangalore - India]} \hfill Sept 2018 --- June 2020} 
+\subsection{\hrole{Machine Learning Engineer - Infilect Technologies}{Sept 2018 --- June 2020}}
+
+    \hprojectname{ML Debug \& Visualization Interface}
     \begin{zitemize}
         \item Designed a custom debug interface built in \textbf{React} and \textbf{Django} backend which helped ML team to easily visualize model outputs, discover edge samples, fine-tune post-processing logic.
+    \end{zitemize}
+
+    \hprojectname{Model Training}
+    \begin{zitemize}
         \item Trained object detectors, classifiers and segmentation models on internal training frameworks built using \textbf{PyTorch} and \textbf{Tensorflow}.
-        \item Created image search system to find samples for classification data from huge untagged corpus of 55M images. Used  \textbf{Elasticsearch} to store embeddings and KNN plugin to query for embedding matches. 
+    \end{zitemize}
+
+    \hprojectname{Image Search System}
+    \begin{zitemize}
+        \item Created image search system to find samples for classification data from huge untagged corpus of 55M images. Used  \textbf{Elasticsearch} to store embeddings and KNN plugin to query for embedding matches.
     \end{zitemize}
 
 
-\subsection*{\underline{Research Engineer} - \normalsize\normalfont\underline{Praemineo Technologies} \textbf{[Bangalore - India]} \hfill June 2017 --- Aug 2018} 
+\subsection{\hrole{Research Engineer - Praemineo Technologies}{June 2017 --- Aug 2018}}
+
+    \hprojectname{Multilingual OCR System}
     \begin{zitemize}
-        \item Built a Multilingual OCR system to extract text from a document with \textbf{\textasciitilde96\% accuracy} using a 
-        \textbf{CNN and LSTM} based model.
-        \item Built Android app for non-GPS geolocation system using WiFi signal triangulation. Worked with accuracy of \textasciitilde2 meters indoors. 
+        \item Built a Multilingual OCR system to extract text from a document with \textbf{\textasciitilde96\% accuracy} using a \textbf{CNN and LSTM} based model.
+    \end{zitemize}
+
+    \hprojectname{Indoor Geolocation System}
+    \begin{zitemize}
+        \item Built Android app for non-GPS geolocation system using WiFi signal triangulation. Worked with accuracy of \textasciitilde2 meters indoors.
     \end{zitemize}
 
 \vspace{-0.1cm}
