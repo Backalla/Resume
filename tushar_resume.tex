@@ -79,7 +79,7 @@
 {\color{UI_blue} \hrulefill}
 \end{center}
 
-\noindent\textit{\textbf{Summary}}: Summary
+\noindent\textit{\textbf{Summary}}: Senior ML Engineer with 9 years of experience building large-scale production ML and LLM systems. Currently at Google shipping LLM-powered products serving 1B+ users; previously at Booking.com leading ML platform engineering serving 170B+ predictions per day. Consistent track record of end-to-end ML ownership and delivering measurable business impact at scale.
 \section{Experience}
 \subsection{\hrole{Senior Software Engineer - Google - AI Research Accelerator Team}{Oct 2023 --- Present}}
 
@@ -87,7 +87,7 @@
     \begin{zitemize}
         \item Built a synthetic data generation pipeline using \textbf{Gemini 2.5 Pro} to produce human-reviewed post-training datasets across 7 languages for \textbf{Gemini Nano v4}, covering translation, summarization, chat, and proofreading capabilities.
         \item Developed \textbf{LLM-as-judge autoraters} evaluating model outputs on naturalness, verbosity, and language adherence, surfacing critical capability gaps in non-English languages.
-        \item Created an end-to-end eval automation platform enabling DeepMind engineers to benchmark Nano v4 checkpoints against golden datasets with a leaderboard for tracking progress, significantly reducing model rollout effort.
+        \item Created an end-to-end eval automation platform enabling DeepMind engineers to benchmark \textbf{Gemini Nano v4 checkpoints} against golden datasets with a leaderboard for tracking progress, significantly reducing model rollout effort.
     \end{zitemize}
 
     \hprojectname{LLM-Assisted Customer Support Agent}
@@ -134,37 +134,44 @@
 
 \subsection{\hrole{Head of AI-Cloud Engineering - Infilect Technologies} {June 2020 --- March 2022}}
 
-    \hprojectname{ML Deployment Pipeline}
+    \hprojectname{Model Training \& Deployment}
     \begin{zitemize}
-        \item End to end ownership of entire ML model deployment pipeline. Scaled ML pipelines containing detection, segmentation and classification blocks to handle peak load of \textasciitilde60k images per hour.
+        \item Trained object detectors, image segmentation, and classification models using \textbf{PyTorch} and \textbf{TensorFlow} for an inventory management product targeting large-scale FMCG customers. Models identified products across \textbf{150 categories} and \textbf{3,500 unique SKUs} with high accuracy.
+        \item Built and owned the end-to-end model deployment pipeline for all models in the company, handling customer-specific fine-tuned detection, segmentation, and classification workloads at a peak load of \textbf{\textasciitilde60k images per hour}.
+        \item Built internal \textbf{SSD} and \textbf{RetinaNet}-based training framework with a plug-and-play interface for training, debugging, and visualizing model predictions. \textbf{Reduced model training and data engineering time by 50\%}.
     \end{zitemize}
 
-    \hprojectname{ML Development Platform}
+    \hprojectname{ML Model Tooling}
     \begin{zitemize}
-        \item Led the development of internal tools for designing, developing, testing and deploying ML models. Similar to \textbf{Tensorboard}.
-    \end{zitemize}
-
-    \hprojectname{Team \& Project Leadership}
-    \begin{zitemize}
-        \item Mentored junior team members and provided technical leadership in ML system design.
-        \item Managed project priorities, deadlines, stakeholder alignment, and deliverables to ensure successful completion of high impact projects.
+        \item Built a custom debug interface using \textbf{React} and \textbf{Django} for the ML team to visualize model outputs, discover edge-case samples, and fine-tune post-processing logic.
+        \item Extended tooling to support hard negative mining, model failure mode analysis, and data drift detection to continuously improve training data quality.
+        \item Mentored junior engineers and provided technical leadership in ML system design; managed project priorities, stakeholder alignment, and deliverables across high-impact initiatives.
     \end{zitemize}
 
 \subsection{\hrole{Machine Learning Engineer - Infilect Technologies}{Sept 2018 --- June 2020}}
 
-    \hprojectname{ML Debug \& Visualization Interface}
-    \begin{zitemize}
-        \item Designed a custom debug interface built in \textbf{React} and \textbf{Django} backend which helped ML team to easily visualize model outputs, discover edge samples, fine-tune post-processing logic.
-    \end{zitemize}
-
-    \hprojectname{Model Training}
-    \begin{zitemize}
-        \item Trained object detectors, classifiers and segmentation models on internal training frameworks built using \textbf{PyTorch} and \textbf{Tensorflow}.
-    \end{zitemize}
-
     \hprojectname{Image Search System}
     \begin{zitemize}
-        \item Created image search system to find samples for classification data from huge untagged corpus of 55M images. Used  \textbf{Elasticsearch} to store embeddings and KNN plugin to query for embedding matches.
+        \item Built an embedding-based image search system over an untagged corpus of \textbf{55M images} to surface relevant training samples for classification tasks — eliminating manual data curation bottlenecks.
+        \item Generated image embeddings using a pretrained \textbf{ResNet} and indexed them in \textbf{Elasticsearch} with the KNN plugin for fast approximate nearest-neighbor retrieval at scale.
+    \end{zitemize}
+
+    \hprojectname{AI Controller - Automated ML Deployment}
+    \begin{zitemize}
+        \item Built an internal framework for automated deployment and lifecycle management of all ML models across a distributed cluster of \textbf{\textasciitilde120 GPU nodes}, serving \textbf{\textasciitilde600 models} simultaneously.
+        \item Integrated \textbf{Prometheus} and \textbf{Grafana} for centralized real-time monitoring; implemented a load prediction algorithm using historical traffic data. Predictive autoscaling delivered \textbf{\textasciitilde25\% reduction in cloud costs}.
+    \end{zitemize}
+
+    \hprojectname{AI-Assisted Data Tagging}
+    \begin{zitemize}
+        \item Built a self-supervised data tagging tool using \textbf{BYOL} and \textbf{SimCLRv2} contrastive learning, achieving \textbf{\textasciitilde60\% tagging accuracy} on unseen, untagged data. This resulted in \textbf{300\% improvement} in annotation throughput and significantly reducing human labelling cost.
+        \item Implemented an iterative retraining feedback loop and integrated hard negative mining to surface challenging samples for human taggers, improving downstream model performance.
+    \end{zitemize}
+
+    \hprojectname{Synthetic Data Generation Using Blender}
+    \begin{zitemize}
+        \item Led development of an automated synthetic image generation pipeline using \textbf{Blender} for object detection and classification tasks, with randomized scene generation controlling camera angles, lighting, object configuration, textures, and lens artifacts.
+        \item Reduced dependency on manually tagged data and delivered a \textbf{\textasciitilde15\% accuracy improvement} over models trained purely on natural images.
     \end{zitemize}
 
 
@@ -182,53 +189,14 @@
 
 \vspace{-0.1cm}
 
-\section{Projects} 
-\subsection*{CLI tool for model management, {\normalsize\normalfont ML Platform Team, Booking.com }} 
-    \begin{zitemize}
-        \item Led the development of a CLI tool written in \textbf{Scala} to manage deployed ML models.  
-        \item Users can directly interact with their models without configuring client tools and making API calls.
-    \end{zitemize}
-
-
-\subsection*{Model Training Framework, {\normalsize\normalfont ML Team, Infilect}}
-    \begin{zitemize}
-        \item Built internal framework to train object detector based on \textbf{SSD} and \textbf{retinanet} architectures. 
-        \item Plug-and-play interface to easily train, debug and visualize model predictions and performance metrics. 
-        \item \textbf{Reduced model training and data engineering time by 50\%}. 
-    \end{zitemize}
-
-
-
-\subsection*{AI Controller, {\normalsize\normalfont MLOps Team, Infilect }}
-    \begin{zitemize}
-        \item Built an internal framework for automated deployment system for all ML models on a distributed cluster of GPU nodes. Integrated \textbf{Prometheus} for centralized monitoring of all (\textasciitilde600) models deployed across \textasciitilde120 GPU nodes. Visualized using \textbf{Grafana} dashboard.
-        \item Implemented load prediction algorithm based on historical load data. \textbf{Predictive scaling policy gave \textasciitilde25\% savings on cloud cost. }
-    \end{zitemize}
-
-
-
-\subsection*{AI Assisted data tagging, {\normalsize\normalfont ML Team, Infilect }}
-    \begin{zitemize}
-        \item Built AI assisted tool to improve data tagging speed and quality for detection and classification tasks. Self supervised data tagging using \textbf{BYOL} and \textbf{SimCLRv2} gave \textasciitilde60\% accuracy on unseen and untagged data. 
-        \item Implemented iterative feedback loop to retrain the classifier to give better suggestions to data tagging team. 
-        \item Integrated hard negative mining which improved downstream model performance by suggesting tough samples to human taggers.
-    \end{zitemize}
-
-
-\subsection*{Synthetic image data generator using Blender, {\normalsize\normalfont ML Team, Infilect }} 
-    \begin{zitemize}
-        \item Led the development of automated synthetic image data generation tool for detection and classification tasks using \textbf{Blender}. 
-        \item Randomised scene generation with precise control over camera angles, lighting, objects configuration, texture and lens artefacts.
-        \item Reduced the dependency on tagged data and gave \textbf{\textasciitilde15\% accuracy improvement} over model trained only on natural tagged data.
-    \end{zitemize}
-
 \section{Skills}
-\begin{tabular}{p{12em} p{48em}}
-\hskills{Programming Languages} &  Scala, Java, C, C++, Python, JavaScript, Shell  \\
-\hskills{ML Development} & Tensorflow, PyTorch, LightGBM, NVIDIA Triton, TensorRT, ONNX, OpenCV, Numpy  \\
-\hskills{Web Development} & React, Django, Flask, Node.js, MongoDB, PostgreSQL, Firebase \\
-\hskills{Cloud Management} & Kubernetes, Ansible, Docker, Helm, Prometheus, Grafana, gcloud and boto SDK  \\
-\hskills{Other tools} & Git, Postman, Streamlit, K9S, Linux CLI tools, Blender   \\
+\begin{tabular}{p{12em} p{40em}}
+\hskills{Programming} & Python, Scala, Java, C++, JavaScript, Shell \\
+\hskills{ML \& Deep Learning} & PyTorch, TensorFlow, Transformers, LightGBM, TFDF, scikit-learn, ONNX, TensorRT, OpenCV, NumPy \\
+\hskills{LLM \& GenAI} & Gemini API, Google ADK, LLM-as-Judge, RAG, Prompt Engineering, LangChain \\
+\hskills{ML Serving \& MLOps} & TensorFlow Serving, NVIDIA Triton, Vertex AI, Kubeflow, MLflow, Elasticsearch, Vector Databases, gRPC \\
+\hskills{Cloud \& Infra} & Kubernetes, Docker, Helm, AWS, GCP, Prometheus, Grafana, Ansible \\
+\hskills{Other Tools} & React, Django, Node.js, Streamlit, PostgreSQL, MongoDB, Blender, Git \\
 \end{tabular}
 \vspace{-0.2cm}
 
