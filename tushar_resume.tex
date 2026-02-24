@@ -83,34 +83,53 @@
 \section{Experience}
 \subsection{\hrole{Senior Software Engineer - Google - AI Research Accelerator Team}{Oct 2023 --- Present}}
 
-    \hprojectname{RCS Spam Protection}
-    \begin{zitemize}
-        \item Building a spam protection system on RCS messaging for detecting potential spammer registrations impacting 1B+ users of RCS on Android and iOS. Built a model retraining and evaluation pipeline to process 50M messaging events per day.
-    \end{zitemize}
-    
-    \hprojectname{DMA Compliance --- Technical Asset Recommendation}
-    \begin{zitemize}
-        \item ML lead for recommending Google wide (\textasciitilde800M) technical assets to (\textasciitilde6k) product owners for DMA compliance.
-        \item Built end-to-end model training \& evaluation framework for experimenting with two-tower model architectures and testing hypotheses.
-    \end{zitemize}
-    
-    \hprojectname{Gemini Nano v4 Multilingual Evaluation}
+    \hprojectname{Gemini Nano v4 Post-train Evals}
     \begin{zitemize}
         \item Built a synthetic data generation pipeline using \textbf{Gemini 2.5 Pro} to produce human-reviewed post-training datasets across 7 languages for \textbf{Gemini Nano v4}, covering translation, summarization, chat, and proofreading capabilities.
-        \item Developed LLM-as-judge autoraters evaluating model outputs on naturalness, verbosity, and language adherence, surfacing critical capability gaps in non-English languages.
+        \item Developed \textbf{LLM-as-judge autoraters} evaluating model outputs on naturalness, verbosity, and language adherence, surfacing critical capability gaps in non-English languages.
         \item Created an end-to-end eval automation platform enabling DeepMind engineers to benchmark Nano v4 checkpoints against golden datasets with a leaderboard for tracking progress, significantly reducing model rollout effort.
     \end{zitemize}
+
+    \hprojectname{LLM-Assisted Customer Support Agent}
+    \begin{zitemize}
+        \item Designed and built an end-to-end agentic support tool using Google's \textbf{ADK} framework with a multi-component pipeline: \textbf{RAG}-based knowledge retrieval for support documents and past cases, tool calling against internal Play Store APIs for account and metadata lookups, and a multi-LLM-agent chain for case summarization, response drafting, and guardrails to prevent data leaks.
+        \item Implemented a \textbf{human-in-the-loop} feedback system where expert human support agents author golden responses and rate LLM outputs, enabling continuous quality monitoring and iterative model improvement.
+        \item Achieved a \textbf{40\% reduction in case resolution time} and \textbf{autonomous resolution of 28\% of support cases} without human intervention, while sustaining high \textbf{CSAT scores} across Google Play developer support.
+    \end{zitemize}
+
+    \hprojectname{RCS Spam Protection}
+    \begin{zitemize}
+        \item Founding SWE on ML spam protection system for RCS Messaging \textbf{(1B+ users)}. Built spam detection ML system with the unique constraint of building models without access to E2E-encrypted message content. Designed the modeling strategy and launched an onboarding model that proactively flags spammers at registration time, \textbf{blocking 20k+ new spammer registrations per day} at \textbf{FPR $<$ 0.3\%}.
+        \item Drove end-to-end data and infrastructure foundations on a greenfield project with no labels or north-star metric: built a distributed data aggregation pipeline, collaborated with User Safety Team to define ground truth spam markers, established go/no-go launch criteria, and owned model experimentation via automater retraining and metrics dashboards to support post-launch iteration.
+        \item Built interpretability tools to inspect model behaviour and uncover blind spots and biases using \textbf{SHAP Analysis}. Also built explainability tools to debug model mistakes and detect data drift to trigger model retraining.
+    \end{zitemize}
+    
+    \hprojectname{DMA Compliance - Technical Asset Recommendation}
+    \begin{zitemize}
+        \item ML lead for a Google-wide DMA compliance initiative requiring \textasciitilde800M technical assets (configs, data tables, binaries) to be mapped to \textasciitilde6k products to enforce strict cross-product data boundaries and prevent data leakage.
+        \item Designed and built an ML system using a \textbf{two-tower recommender} to predict asset-product associations, auto-generating owner verification emails to fast-track the mapping campaign at scale.
+        \item Built the full training and evaluation pipeline — leveraged verified asset-product mappings as positive signal and generated \textbf{hard negatives} to improve model discriminability; achieved high precision and recall on held-out evaluation sets.
+        \item Completed full migration within \textbf{3 months}, meeting the compliance deadline and avoiding DMA regulatory risk for the company.
+    \end{zitemize}
+    
+    
 
 \subsection{\hrole{Machine Learning Engineer - Booking.com - ML Platform Team}{April 2022 --- Sept 2023}}
 
     \hprojectname{ML Inference Platform}
     \begin{zitemize}
-        \item Led the integration and deployment of \textbf{Tensorflow Serving} and \textbf{NVIDIA Triton} as inference backends in ML Platform for large scale ML serving. Handled peak load of \textbf{170 Billion} requests per day with \textbf{p99.9 latency of 50ms}.
+        \item Owned the integration of \textbf{Tensorflow Serving} as a new inference backend for Booking.com's ML platform, replacing a legacy Java/Scala serving layer limited to older TF versions and LightGBM, enabling support for modern TF versions and new GBDT frameworks like \textbf{TFDF}. Each model type is hosted in an isolated Docker container exposing gRPC endpoints.
+        \item New backend scaled to handle peak load of \textbf{170 Billion predictions per day} at \textbf{p99.9 latency of 50ms}.
     \end{zitemize}
 
-    \hprojectname{Cloud Migration Tooling}
+    \hprojectname{Cloud Migration}
     \begin{zitemize}
-        \item Collaborated with cross-functional teams to develop internal tools to migrate ML serving deployments from on-prem infra to AWS.
+        \item Led migration of ML serving deployments from unreliable on-prem infrastructure to \textbf{AWS}, collaborating with cross-functional infra and data storage teams. Migrated \textbf{\textasciitilde80\% of serving load} to AWS, significantly reducing dependency on on-prem infra.
+    \end{zitemize}
+
+    \hprojectname{Self-Serve Model Onboarding CLI}
+    \begin{zitemize}
+        \item Built a \textbf{CLI tool} enabling platform users to independently onboard and manage their ML models on the serving platform without platform team involvement, eliminating a critical bottleneck and significantly reducing support ticket volume.
     \end{zitemize}
 
 \subsection{\hrole{Head of AI-Cloud Engineering - Infilect Technologies} {June 2020 --- March 2022}}
